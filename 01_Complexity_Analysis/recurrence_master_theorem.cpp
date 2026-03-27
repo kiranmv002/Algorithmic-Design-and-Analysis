@@ -44,3 +44,36 @@ void mergeSort(int arr[], int l, int r) {
     mergeSort(arr, m + 1, r);
     merge(arr, l, m, r);
 }
+
+// -----------------------------------------------
+// T(n) = 2T(n-1) + 1  → Tower of Hanoi → O(2ⁿ)
+// -----------------------------------------------
+void hanoi(int n, char from, char to, char aux) {
+    if (n == 1) {
+        cout << "Move disk 1 from " << from << " to " << to << "\n";
+        return;
+    }
+    hanoi(n - 1, from, aux, to);
+    cout << "Move disk " << n << " from " << from << " to " << to << "\n";
+    hanoi(n - 1, aux, to, from);
+}
+
+int main() {
+    // Binary Search
+    int arr[] = {2, 4, 6, 8, 10, 12};
+    cout << "Binary Search for 8: index = "
+         << binarySearch(arr, 0, 5, 8) << "\n\n";
+
+    // Merge Sort
+    int arr2[] = {38, 27, 43, 3, 9, 82};
+    mergeSort(arr2, 0, 5);
+    cout << "Merge Sort: ";
+    for (int x : arr2) cout << x << " ";
+    cout << "\n\n";
+
+    // Tower of Hanoi
+    cout << "Tower of Hanoi (3 disks):\n";
+    hanoi(3, 'A', 'C', 'B');
+
+    return 0;
+}
