@@ -11,3 +11,5 @@
 |------|-----------|------|-------|--------|
 | bubble_sort.cpp | Bubble Sort | O(n²) | O(1) | YES |
 | selection_sort.cpp | Selection Sort | O(n²) | O(1) | NO |
+| insertion_sort.cpp | Insertion Sort | O(n²) | O(1) | YES |
+| merge_sort.cpp | Merge Sort | O(n log n) | O(n) | YES |
