@@ -35,3 +35,12 @@ void printArray(int arr[], int n) {
         cout << arr[i] << " ";
     cout << "\n";
 }
+
+int main() {
+    int arr[] = {170, 45, 75, 90, 802, 24, 2, 66};
+    int n = 8;
+    cout << "Before: "; printArray(arr, n);
+    radixSort(arr, n);
+    cout << "After:  "; printArray(arr, n);
+    return 0;
+}
