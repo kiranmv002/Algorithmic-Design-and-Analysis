@@ -4,7 +4,6 @@
 // SPACE: O(1) iterative | O(log₃n) recursive
 // NOTE:  Array MUST be sorted
 // ============================================================
-
 #include <iostream>
 using namespace std;
 
@@ -40,4 +39,15 @@ int ternarySearchRec(int arr[], int low, int high, int target) {
         return ternarySearchRec(arr, mid2 + 1, high, target);
     else
         return ternarySearchRec(arr, mid1 + 1, mid2 - 1, target);
+}
+
+int main() {
+    int arr[] = {1, 3, 5, 7, 9, 11, 13, 15, 17, 19};
+    int n = 10;
+
+    cout << "Array: 1 3 5 7 9 11 13 15 17 19\n";
+    cout << "Search 11 (Iterative): index = " << ternarySearchIter(arr, n, 11) << "\n"; // 5
+    cout << "Search 11 (Recursive): index = " << ternarySearchRec(arr, 0, n-1, 11) << "\n"; // 5
+    cout << "Search 99: index = " << ternarySearchIter(arr, n, 99) << "\n"; // -1
+    return 0;
 }
