@@ -33,3 +33,21 @@ int maxSubarrayDC(int arr[], int l, int r) {
                 maxCrossing(arr, l, m, r)});
 }
 
+// Kadane's Algorithm O(n) for comparison
+int kadane(int arr[], int n) {
+    int maxSum = arr[0], currSum = arr[0];
+    for (int i = 1; i < n; i++) {
+        currSum = max(arr[i], currSum + arr[i]);
+        maxSum = max(maxSum, currSum);
+    }
+    return maxSum;
+}
+
+int main() {
+    int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    int n = 9;
+    cout << "Array: -2 1 -3 4 -1 2 1 -5 4\n";
+    cout << "Max Subarray (D&C):    " << maxSubarrayDC(arr, 0, n-1) << "\n"; // 6
+    cout << "Max Subarray (Kadane): " << kadane(arr, n) << "\n";              // 6
+    return 0;
+}
