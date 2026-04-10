@@ -42,3 +42,15 @@ void printMatrix(int M[2][2]) {
     }
 }
 
+int main() {
+    int A[2][2] = {{1, 2}, {3, 4}};
+    int B[2][2] = {{5, 6}, {7, 8}};
+    int C[2][2], D[2][2];
+
+    strassen(A, B, C);
+    naiveMultiply(A, B, D);
+
+    cout << "Strassen Result:\n"; printMatrix(C);
+    cout << "Naive Result:\n";    printMatrix(D);
+    return 0;
+}
