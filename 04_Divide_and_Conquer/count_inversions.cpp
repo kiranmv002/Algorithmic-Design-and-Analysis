@@ -26,3 +26,22 @@ long long mergeCount(int arr[], int l, int m, int r) {
     while (j < n2) arr[k++] = R[j++];
     return inv;
 }
+
+long long countInversions(int arr[], int l, int r) {
+    if (l >= r) return 0;
+    int m = (l + r) / 2;
+    return countInversions(arr, l, m) +
+           countInversions(arr, m + 1, r) +
+           mergeCount(arr, l, m, r);
+}
+
+int main() {
+    int arr[] = {8, 4, 2, 1};
+    int n = 4;
+    cout << "Array: 8 4 2 1\n";
+    cout << "Inversions: " << countInversions(arr, 0, n-1) << "\n"; // 6
+    int arr2[] = {1, 20, 6, 4, 5};
+    cout << "\nArray: 1 20 6 4 5\n";
+    cout << "Inversions: " << countInversions(arr2, 0, 4) << "\n"; // 5
+    return 0;
+}
