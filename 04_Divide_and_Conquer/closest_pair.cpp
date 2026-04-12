@@ -45,3 +45,10 @@ double closestPair(vector<Point>& pts, int l, int r) {
 
     return min(d, stripClosest(strip, d));
 }
+
+int main() {
+    vector<Point> pts = {{2,3},{12,30},{40,50},{5,1},{12,10},{3,4}};
+    sort(pts.begin(), pts.end(), [](Point a, Point b){ return a.x < b.x; });
+    cout << "Closest distance: " << closestPair(pts, 0, pts.size()-1) << "\n"; // ~1.414
+    return 0;
+}
