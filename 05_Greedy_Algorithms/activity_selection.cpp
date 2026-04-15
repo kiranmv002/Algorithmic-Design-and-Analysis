@@ -34,3 +34,13 @@ void activitySelection(vector<Activity>& acts) {
     }
     cout << "Total activities selected: " << count << "\n";
 }
+
+int main() {
+    vector<Activity> acts = {
+        {1, 3, 1}, {2, 5, 2}, {4, 6, 3},
+        {6, 7, 4}, {5, 8, 5}, {8, 9, 6}
+    };
+    activitySelection(acts);
+    // Expected: Activities 1, 3, 4, 6 → 4 activities
+    return 0;
+}
