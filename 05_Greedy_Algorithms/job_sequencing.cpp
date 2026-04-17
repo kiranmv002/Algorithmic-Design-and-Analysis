@@ -41,3 +41,21 @@ void jobSequencing(vector<Job>& jobs) {
         }
     }
 
+    cout << "Job Sequence: ";
+    for (int i = 1; i <= maxDeadline; i++)
+        if (filled[i]) cout << slots[i] << " ";
+    cout << "\nTotal Profit: " << totalProfit << "\n";
+}
+
+int main() {
+    vector<Job> jobs = {
+        {'a', 2, 100},
+        {'b', 1, 19},
+        {'c', 2, 27},
+        {'d', 1, 25},
+        {'e', 3, 15}
+    };
+    jobSequencing(jobs);
+    // Expected: a c e → Profit: 142
+    return 0;
+}
