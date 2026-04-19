@@ -37,3 +37,30 @@ void primsMST(vector<vector<pii>>& adj, int V) {
             }
         }
     }
+
+    cout << "MST Edges:\n";
+    int totalWeight = 0;
+    for (int i = 1; i < V; i++) {
+        cout << parent[i] << " - " << i
+             << "  weight: " << key[i] << "\n";
+        totalWeight += key[i];
+    }
+    cout << "Total MST Weight: " << totalWeight << "\n";
+}
+
+int main() {
+    int V = 5;
+    vector<vector<pii>> adj(V);
+
+    // Add edges {weight, vertex}
+    adj[0].push_back({2, 1}); adj[1].push_back({2, 0});
+    adj[0].push_back({3, 3}); adj[3].push_back({3, 0});
+    adj[1].push_back({1, 2}); adj[2].push_back({1, 1});
+    adj[1].push_back({4, 3}); adj[3].push_back({4, 1});
+    adj[2].push_back({5, 4}); adj[4].push_back({5, 2});
+    adj[3].push_back({7, 4}); adj[4].push_back({7, 3});
+
+    primsMST(adj, V);
+    // Expected Total: 13
+    return 0;
+}
