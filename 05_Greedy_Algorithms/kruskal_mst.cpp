@@ -54,3 +54,14 @@ void kruskalMST(int V, vector<Edge>& edges) {
     }
     cout << "Total MST Weight: " << totalWeight << "\n";
 }
+
+int main() {
+    int V = 4;
+    vector<Edge> edges = {
+        {0, 1, 10}, {0, 2, 6}, {0, 3, 5},
+        {1, 3, 15}, {2, 3, 4}
+    };
+    kruskalMST(V, edges);
+    // Expected: 2-3(4), 0-3(5), 0-1(10) → Total: 19
+    return 0;
+}
