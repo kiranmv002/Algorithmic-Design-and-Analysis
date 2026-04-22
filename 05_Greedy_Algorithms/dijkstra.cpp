@@ -41,3 +41,21 @@ void dijkstra(vector<vector<pii>>& adj, int src, int V) {
         cout << "\n";
     }
 }
+
+int main() {
+    int V = 5;
+    vector<vector<pii>> adj(V);
+
+    // Add edges {weight, vertex}
+    adj[0].push_back({4, 1}); adj[1].push_back({4, 0});
+    adj[0].push_back({1, 2}); adj[2].push_back({1, 0});
+    adj[1].push_back({2, 2}); adj[2].push_back({2, 1});
+    adj[1].push_back({5, 3}); adj[3].push_back({5, 1});
+    adj[2].push_back({8, 3}); adj[3].push_back({8, 2});
+    adj[2].push_back({2, 4}); adj[4].push_back({2, 2});
+    adj[3].push_back({3, 4}); adj[4].push_back({3, 3});
+
+    dijkstra(adj, 0, V);
+    // Expected: 0→0=0, 0→1=3, 0→2=1, 0→3=6, 0→4=3
+    return 0;
+}
