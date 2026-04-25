@@ -12,6 +12,7 @@ Richard Bellman in 1950s.
 
 ## Real Life Example
 Fibonacci without DP:
+```
 fib(5)
 ├── fib(4)
 │   ├── fib(3)
@@ -19,7 +20,7 @@ fib(5)
 │   │   └── fib(1)
 │   └── fib(2)     ← computed again!
 └── fib(3)         ← computed again!
-
+```
 fib(3) is computed 2 times
 fib(2) is computed 3 times → WASTEFUL!
 
@@ -54,3 +55,31 @@ Store all results in a table (array/matrix).
 
 Pros: No recursion, faster in practice
 Cons: Computes all subproblems even if not needed
+
+## Comparison
+
+| Feature | Top-Down (Memo) | Bottom-Up (Tab) |
+|---------|----------------|-----------------|
+| Direction | Big → Small | Small → Big |
+| Method | Recursion + Cache | Iteration + Table |
+| Stack overflow | Possible | Never |
+| Subproblems | Only needed | All subproblems |
+| Code style | Recursive | Iterative |
+| Speed | Slightly slower | Slightly faster |
+
+## DP vs Greedy vs Divide & Conquer
+
+| Feature | DP | Greedy | D&C |
+|---------|----|--------|-----|
+| Subproblems | Overlapping | No subproblems | Non-overlapping |
+| Choice | Considers all | One greedy choice | Split and combine |
+| Optimality | Always optimal | Not always | Depends |
+| Speed | Slower | Faster | Medium |
+| Example | 0/1 Knapsack | Fractional Knapsack | Merge Sort |
+
+## General Steps to Solve DP Problem
+1. Define the SUBPROBLEM (what does dp[i] mean?)
+2. Write the RECURRENCE (transition formula)
+3. Identify BASE CASES
+4. Decide order of computation
+5. Find answer from table
