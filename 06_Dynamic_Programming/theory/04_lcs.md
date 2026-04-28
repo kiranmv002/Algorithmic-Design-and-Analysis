@@ -36,13 +36,14 @@ s1 = "ABCB"  (length 4)
 s2 = "BCB"   (length 3)
 
 DP Table:
+```
      ""  B   C   B
 ""    0   0   0   0
 A     0   0   0   0
 B     0   1   1   1
 C     0   1   2   2
 B     0   1   2   3
-
+```
 LCS length = dp[4][3] = 3 → "BCB" ✅
 
 ## LCS vs LIS vs Edit Distance
