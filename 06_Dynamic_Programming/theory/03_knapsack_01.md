@@ -45,14 +45,14 @@ Items: weights=[2,3,4,5], values=[3,4,5,6]
 Capacity W = 5
 
 DP Table (rows=items, cols=capacity 0 to 5):
-
+```
     0  1  2  3  4  5
 i=0 0  0  0  0  0  0
 i=1 0  0  3  3  3  3   ← item1(w=2,v=3)
 i=2 0  0  3  4  4  7   ← item2(w=3,v=4)
 i=3 0  0  3  4  5  7   ← item3(w=4,v=5)
 i=4 0  0  3  4  5  7   ← item4(w=5,v=6)
-
+```
 Answer = dp[4][5] = 7 ✅
 (Take item1 w=2,v=3 + item2 w=3,v=4 = 7)
 
