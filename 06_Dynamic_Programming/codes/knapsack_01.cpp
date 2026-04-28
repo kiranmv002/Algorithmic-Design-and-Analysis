@@ -117,7 +117,8 @@ int knapsackOpt(vector<int>& weights, vector<int>& values,
     return dp[W];
 }
 
-// Print which items are selected
+
+
 void printItems(vector<int>& weights, vector<int>& values,
                 int W, int n) {
     vector<vector<int>> dp(n+1, vector<int>(W+1, 0));
