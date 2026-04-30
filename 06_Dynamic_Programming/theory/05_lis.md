@@ -35,7 +35,7 @@ max(dp[0], dp[1], ..., dp[n-1])
 ## Example Step by Step
 Array: [10, 9, 2, 5, 3, 7, 101, 18]
 Index:   0  1  2  3  4  5   6   7
-
+```
 dp[0]=1 (10 alone)
 dp[1]=1 (9 alone, 10>9 so can't extend)
 dp[2]=1 (2 alone, 10>2, 9>2)
@@ -47,7 +47,7 @@ dp[7]=4 (2,5,7 < 18 → dp[7]=dp[5]+1=4)
 
 dp = [1, 1, 1, 2, 2, 3, 4, 4]
 LIS = max(dp) = 4 ✅
-
+```
 ## Binary Search Approach O(n log n)
 Maintain a tails array.
 tails[i] = smallest tail element for
