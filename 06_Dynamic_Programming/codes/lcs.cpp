@@ -50,3 +50,15 @@ string printLCS(const string& s1, const string& s2) {
     }
     return lcs;
 }
+
+int main() {
+    string s1 = "ABCBDAB";
+    string s2 = "BDCAB";
+
+    cout << "=== LONGEST COMMON SUBSEQUENCE ===\n";
+    cout << "s1: " << s1 << "\n";
+    cout << "s2: " << s2 << "\n\n";
+    cout << "LCS Length: " << lcsLength(s1, s2) << "\n"; // 4
+    cout << "LCS String: " << printLCS(s1, s2) << "\n";  // BCAB or BDAB
+    return 0;
+}
