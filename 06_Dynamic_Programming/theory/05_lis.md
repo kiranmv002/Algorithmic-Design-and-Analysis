@@ -4,7 +4,7 @@
 Given an array of integers.
 Find length of longest subsequence where
 each element is STRICTLY GREATER than previous.
-
+```
 ## Example
 Array: [10, 9, 2, 5, 3, 7, 101, 18]
 
@@ -14,7 +14,7 @@ Some increasing subsequences:
 [2, 3, 7, 18]  → length 4
 
 LIS = 4 ✅
-
+```
 ## DP Approach O(n²)
 
 ### Step 1: Define Subproblem
