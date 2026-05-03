@@ -63,3 +63,12 @@ void printLIS(vector<int>& arr) {
     cout << "\n";
 }
 
+int main() {
+    vector<int> arr = {10, 9, 2, 5, 3, 7, 101, 18};
+    cout << "=== LONGEST INCREASING SUBSEQUENCE ===\n";
+    cout << "Array: 10 9 2 5 3 7 101 18\n\n";
+    cout << "LIS Length (DP O(n²)):      " << lisDP(arr) << "\n";         // 4
+    cout << "LIS Length (Binary Search): " << lisBinarySearch(arr) << "\n"; // 4
+    printLIS(arr); // 2 3 7 101 or 2 5 7 101
+    return 0;
+}
