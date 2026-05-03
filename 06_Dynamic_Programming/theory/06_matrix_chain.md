@@ -46,7 +46,7 @@ dp[i][i] = 0 (single matrix, no multiplication)
 
 ### Step 4: Fill diagonally
 Fill for chains of length 2, 3, ..., n
-
+```
 ## Example
 Matrices: dims = [40, 20, 30, 10, 30]
 A1=40×20, A2=20×30, A3=30×10, A4=10×30
@@ -70,7 +70,7 @@ dp[1][4] = min(
   dp[1][2]+dp[3][4]+40×30×30 = 24000+9000+36000 = 69000
   dp[1][3]+dp[4][4]+40×10×30 = 14000+0+12000 = 26000
 ) = 26000 ✅
-
+```
 ## Complexity
 | | Time | Space |
 |-|------|-------|
