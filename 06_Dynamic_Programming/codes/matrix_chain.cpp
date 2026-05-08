@@ -41,3 +41,15 @@ void printParenthesis(vector<vector<int>>& bracket,
     printParenthesis(bracket, bracket[i][j]+1, j);
     cout << ")";
 }
+
+int main() {
+    // Matrix dimensions
+    // A1=40×20, A2=20×30, A3=30×10, A4=10×30
+    vector<int> dims = {40, 20, 30, 10, 30};
+
+    cout << "=== MATRIX CHAIN MULTIPLICATION ===\n";
+    cout << "Matrices: A1(40×20) A2(20×30) A3(30×10) A4(10×30)\n\n";
+    cout << "Minimum multiplications: "
+         << matrixChain(dims) << "\n"; // Expected: 26000
+    return 0;
+}
