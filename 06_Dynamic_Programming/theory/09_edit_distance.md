@@ -37,3 +37,32 @@ If s1[i-1] != s2[j-1]:   ← characters don't match
         dp[i][j-1],    ← INSERT into s1
         dp[i-1][j-1]   ← REPLACE in s1
     )
+
+### Step 3: Base Cases
+dp[i][0] = i  (delete all i characters of s1)
+dp[0][j] = j  (insert all j characters of s2)
+
+## Example Step by Step
+s1 = "CAT"  s2 = "CUT"
+
+     ""  C  U  T
+""    0  1  2  3
+C     1  0  1  2
+A     2  1  1  2
+T     3  2  2  1
+
+Edit distance = dp[3][3] = 1
+(Replace A with U) ✅
+
+## Applications
+→ Spell checkers
+→ DNA sequence alignment
+→ Git diff / merge tools
+→ Autocorrect in phones
+→ Plagiarism detection
+
+## Complexity
+| | Time | Space |
+|-|------|-------|
+| Standard | O(m×n) | O(m×n) |
+| Space optimized | O(m×n) | O(min(m,n)) |
