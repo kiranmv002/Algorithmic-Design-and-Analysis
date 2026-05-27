@@ -12,7 +12,7 @@ For each intermediate vertex k:
 Check if path i→k→j is shorter than direct i→j.
 
 ## DP Approach
-
+```
 ### Step 1: Define Subproblem
 dp[i][j][k] = shortest path from i to j
               using only vertices {1,2,...,k}
@@ -60,7 +60,7 @@ dp[3][2] = min(∞, dp[3][0]+dp[0][2]) = min(∞,∞) = ∞
 Final shortest paths:
 0→2 = 5 (via 1: 0→1→2 = 3+2 = 5)
 1→3 = 3 (via 2: 1→2→3 = 2+1 = 3)
-
+```
 ## Negative Cycle Detection
 If dp[i][i] < 0 after algorithm → negative cycle exists!
 
