@@ -49,3 +49,22 @@ void bellmanFord(int V, vector<Edge>& edges, int src) {
         cout << "\n";
     }
 }
+
+int main() {
+    cout << "=== BELLMAN-FORD ===\n\n";
+    int V = 5;
+    vector<Edge> edges = {
+        {0,1,6}, {0,2,7}, {1,2,8}, {1,3,-4},
+        {1,4,5}, {2,3,9}, {2,4,-3}, {3,0,2}, {4,3,7}
+    };
+    bellmanFord(V, edges, 0);
+    // Expected: 0→0=0, 0→1=6, 0→2=7, 0→3=2, 0→4=4
+
+    cout << "\n=== NEGATIVE CYCLE DETECTION ===\n";
+    vector<Edge> edges2 = {
+        {0,1,1}, {1,2,-3}, {2,0,1}
+    };
+    bellmanFord(3, edges2, 0);
+    // Expected: Negative cycle detected!
+    return 0;
+}
