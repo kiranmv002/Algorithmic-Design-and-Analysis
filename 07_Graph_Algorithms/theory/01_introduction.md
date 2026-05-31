@@ -12,7 +12,7 @@ E = set of edges (connections)
 → Circuit Board  → Components = vertices, Wires = edges
 
 ## Types of Graphs
-
+```
 ### 1. Directed vs Undirected
 Directed (Digraph): Edges have direction A→B
 Undirected: Edges go both ways A—B
@@ -29,9 +29,9 @@ DAG = Directed Acyclic Graph
 ### 4. Connected vs Disconnected
 Connected: Path exists between every pair
 Disconnected: Some vertices unreachable
-
+```
 ## Graph Representations
-
+```
 ### Adjacency Matrix
 2D array of size V×V
 matrix[i][j] = 1 if edge i→j exists
@@ -46,7 +46,7 @@ adj[i] = list of neighbors of vertex i
 
 Pros:  O(V+E) space — good for sparse graphs
 Cons:  O(degree) edge lookup
-
+```
 ## When to Use Which?
 
 | Representation | Space | Edge Check | Neighbors | Best For |
