@@ -39,3 +39,31 @@ matrix[i][j] = 1 if edge i→j exists
 
 Pros:  O(1) edge lookup
 Cons:  O(V²) space — bad for sparse graphs
+
+### Adjacency List
+Array of lists
+adj[i] = list of neighbors of vertex i
+
+Pros:  O(V+E) space — good for sparse graphs
+Cons:  O(degree) edge lookup
+
+## When to Use Which?
+
+| Representation | Space | Edge Check | Neighbors | Best For |
+|---------------|-------|------------|-----------|----------|
+| Adj Matrix | O(V²) | O(1) | O(V) | Dense graphs |
+| Adj List | O(V+E) | O(degree) | O(degree) | Sparse graphs |
+
+## Graph Algorithms Overview
+
+| Algorithm | Purpose | Time |
+|-----------|---------|------|
+| BFS | Shortest path (unweighted) | O(V+E) |
+| DFS | Cycle detection, topo sort | O(V+E) |
+| Dijkstra | Shortest path (weighted) | O((V+E)logV) |
+| Bellman-Ford | Shortest path (negative) | O(VE) |
+| Floyd-Warshall | All pairs shortest path | O(V³) |
+| Kruskal | Minimum spanning tree | O(E logE) |
+| Prim | Minimum spanning tree | O((V+E)logV) |
+| Topological Sort | Ordering of DAG | O(V+E) |
+| Kosaraju | Strongly connected components | O(V+E) |
