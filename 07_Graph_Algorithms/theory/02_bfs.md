@@ -22,6 +22,7 @@ Spreads outward level by level.
       - Enqueue v
 
 ## Example
+```
 Graph:
 0 — 1 — 3
 |       |
@@ -41,7 +42,7 @@ BFS Order: 0 1 2 3 4
 Level 0: {0}
 Level 1: {1, 2}
 Level 2: {3, 4}
-
+```
 ## Shortest Path Property
 BFS gives SHORTEST PATH in UNWEIGHTED graphs.
 Level of vertex = shortest distance from source.
