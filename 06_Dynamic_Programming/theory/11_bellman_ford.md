@@ -16,12 +16,12 @@ After V-1 iterations, shortest paths are finalized.
 (Shortest path can have at most V-1 edges)
 
 ## DP / Relaxation Approach
-
+```
 ### Relaxation
 For edge u→v with weight w:
 If dist[u] + w < dist[v]:
     dist[v] = dist[u] + w  ← RELAX!
-
+```
 ### Algorithm
 1. Initialize dist[src]=0, dist[all others]=∞
 2. Repeat V-1 times:
@@ -31,6 +31,7 @@ If dist[u] + w < dist[v]:
    If any edge can still be relaxed → NEGATIVE CYCLE!
 
 ## Example
+```
 Vertices: 0,1,2,3,4
 Edges: 0→1(6), 0→2(7), 1→2(8), 1→3(-4),
        1→4(5), 2→3(9), 2→4(-3), 3→0(2), 4→3(7)
@@ -51,7 +52,7 @@ Iteration 1:
 
 After V-1=4 iterations:
 dist = [0, 6, 7, 2, 4] ✅
-
+```
 ## Negative Cycle Detection
 After V-1 iterations, try relaxing again.
 If dist[v] can still decrease → NEGATIVE CYCLE exists!
