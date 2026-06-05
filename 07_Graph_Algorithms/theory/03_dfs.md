@@ -33,3 +33,34 @@ Visit 2 → no unvisited neighbors
 Backtrack all the way
 
 DFS Order: 0 1 3 4 2
+
+## BFS vs DFS Comparison
+
+| Feature | BFS | DFS |
+|---------|-----|-----|
+| Data Structure | Queue | Stack/Recursion |
+| Order | Level by level | Deep first |
+| Shortest Path | Yes (unweighted) | No |
+| Memory | More (stores level) | Less |
+| Use Case | Shortest path | Cycle, topo sort |
+| Complete | Yes | Yes |
+
+## Applications
+→ Cycle detection in graphs
+→ Topological sorting
+→ Strongly connected components
+→ Maze solving
+→ Path finding
+→ Tree traversals (pre/in/post order)
+
+## DFS Properties
+Discovery time: When vertex first visited
+Finish time: When all neighbors explored
+These times help in topological sort and SCC.
+
+## Complexity
+| | Time | Space |
+|-|------|-------|
+| DFS | O(V+E) | O(V) |
+
+O(V) space for visited array and recursion stack
