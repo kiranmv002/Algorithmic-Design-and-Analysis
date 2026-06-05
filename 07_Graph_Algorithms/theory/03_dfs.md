@@ -19,6 +19,7 @@ If stuck → backtrack and try another direction.
 4. Backtrack when no unvisited neighbors
 
 ## Example
+```
 Graph:
 0 — 1 — 3
 |       |
@@ -33,7 +34,7 @@ Visit 2 → no unvisited neighbors
 Backtrack all the way
 
 DFS Order: 0 1 3 4 2
-
+```
 ## BFS vs DFS Comparison
 
 | Feature | BFS | DFS |
