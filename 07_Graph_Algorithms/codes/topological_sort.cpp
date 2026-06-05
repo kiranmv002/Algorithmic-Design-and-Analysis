@@ -37,3 +37,41 @@ void topoSortDFS(vector<vector<int>>& adj, int V) {
     cout << "\n";
 }
 
+// Method 2: Kahn's Algorithm (BFS)
+void topoSortKahn(vector<vector<int>>& adj, int V) {
+    vector<int> inDegree(V, 0);
+
+    // Calculate in-degrees
+    for (int u = 0; u < V; u++)
+        for (int v : adj[u])
+            inDegree[v]++;
+
+    // Add all 0 in-degree vertices
+    queue<int> q;
+    for (int i = 0; i < V; i++)
+        if (inDegree[i] == 0)
+            q.push(i);
+
+    cout << "Topological Sort (Kahn's): ";
+    int count = 0;
+    vector<int> result;
+
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        result.push_back(u);
+        count++;
+
+        for (int v : adj[u]) {
+            inDegree[v]--;
+            if (inDegree[v] == 0)
+                q.push(v);
+        }
+    }
+
+    if (count != V)
+        cout << "CYCLE DETECTED! No topological order.\n";
+    else {
+        for (int x : result) cout << x << " ";
+        cout << "\n";
+    }
+}
