@@ -32,3 +32,34 @@ Valid Topological Orders:
 5 4 2 3 0 1
 (Multiple valid orders possible)
 
+## Method 1: DFS Based
+1. Do DFS on all vertices
+2. After all neighbors of vertex u are done
+   → push u to a stack
+3. Pop stack for topological order
+
+## Method 2: Kahn's Algorithm (BFS Based)
+1. Calculate in-degree of all vertices
+2. Add all 0 in-degree vertices to queue
+3. While queue not empty:
+   a. Dequeue vertex u
+   b. Add u to result
+   c. For each neighbor v of u:
+      Decrease in-degree of v
+      If in-degree of v becomes 0 → enqueue v
+4. If result has all vertices → valid DAG
+   Else → cycle exists!
+
+## Kahn's vs DFS
+
+| Feature | Kahn's (BFS) | DFS |
+|---------|-------------|-----|
+| Approach | In-degree | Finish time |
+| Cycle Detection | Yes (easy) | Yes (harder) |
+| Order | BFS order | Reverse DFS |
+| Implementation | Iterative | Recursive |
+
+## Complexity
+| | Time | Space |
+|-|------|-------|
+| Both methods | O(V+E) | O(V) |
