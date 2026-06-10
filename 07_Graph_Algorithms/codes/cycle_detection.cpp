@@ -91,3 +91,36 @@ int main() {
     cout << "Has cycle: "
          << (hasCycleUndirected(adj1, V1) ? "YES" : "NO")
          << "\n\n"; // YES
+
+    // Undirected without cycle
+    cout << "Undirected Graph (no cycle):\n";
+    int V2 = 4;
+    vector<vector<int>> adj2(V2);
+    adj2[0].push_back(1); adj2[1].push_back(0);
+    adj2[1].push_back(2); adj2[2].push_back(1);
+    adj2[2].push_back(3); adj2[3].push_back(2);
+    cout << "Has cycle: "
+         << (hasCycleUndirected(adj2, V2) ? "YES" : "NO")
+         << "\n\n"; // NO
+
+    // Directed with cycle
+    cout << "Directed Graph (with cycle):\n";
+    int V3 = 4;
+    vector<vector<int>> adj3(V3);
+    adj3[0].push_back(1);
+    adj3[1].push_back(2);
+    adj3[2].push_back(3);
+    adj3[3].push_back(1); // cycle: 1→2→3→1
+    cout << "Has cycle: "
+         << (hasCycleDirected(adj3, V3) ? "YES" : "NO")
+         << "\n\n"; // YES
+
+    // Union-Find
+    cout << "Union-Find cycle detection:\n";
+    vector<pair<int,int>> edges = {{0,1},{1,2},{2,3},{3,0}};
+    cout << "Has cycle: "
+         << (hasCycleUnionFind(4, edges) ? "YES" : "NO")
+         << "\n"; // YES
+
+    return 0;
+}
