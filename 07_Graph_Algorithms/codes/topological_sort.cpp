@@ -75,3 +75,33 @@ void topoSortKahn(vector<vector<int>>& adj, int V) {
         cout << "\n";
     }
 }
+
+int main() {
+    int V = 6;
+    vector<vector<int>> adj(V);
+
+    // Directed edges
+    adj[5].push_back(0);
+    adj[5].push_back(2);
+    adj[4].push_back(0);
+    adj[4].push_back(1);
+    adj[2].push_back(3);
+    adj[3].push_back(1);
+
+    cout << "=== TOPOLOGICAL SORT ===\n";
+    cout << "Graph: 5→0, 5→2, 4→0, 4→1, 2→3, 3→1\n\n";
+    topoSortDFS(adj, V);
+    topoSortKahn(adj, V);
+    // Valid outputs: 5 4 2 3 1 0 or 4 5 2 3 0 1 etc.
+
+    // Cycle detection test
+    cout << "\n=== CYCLE DETECTION TEST ===\n";
+    int V2 = 3;
+    vector<vector<int>> adj2(V2);
+    adj2[0].push_back(1);
+    adj2[1].push_back(2);
+    adj2[2].push_back(0); // Creates cycle!
+    topoSortKahn(adj2, V2);
+
+    return 0;
+}
