@@ -18,6 +18,7 @@ If cycle exists → topological sort NOT possible.
   (Do task A before task B)
 
 ## Example
+```
 DAG:
 5 → 0
 5 → 2
@@ -31,13 +32,13 @@ Valid Topological Orders:
 4 5 2 3 0 1
 5 4 2 3 0 1
 (Multiple valid orders possible)
-
+```
 ## Method 1: DFS Based
 1. Do DFS on all vertices
 2. After all neighbors of vertex u are done
    → push u to a stack
 3. Pop stack for topological order
-
+```
 ## Method 2: Kahn's Algorithm (BFS Based)
 1. Calculate in-degree of all vertices
 2. Add all 0 in-degree vertices to queue
@@ -49,7 +50,7 @@ Valid Topological Orders:
       If in-degree of v becomes 0 → enqueue v
 4. If result has all vertices → valid DAG
    Else → cycle exists!
-
+```
 ## Kahn's vs DFS
 
 | Feature | Kahn's (BFS) | DFS |
