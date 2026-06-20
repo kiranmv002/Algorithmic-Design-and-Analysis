@@ -67,3 +67,36 @@ void printPath(vector<int>& parent, int dest) {
     printPath(parent, parent[dest]);
     cout << " → " << dest;
 }
+
+int main() {
+    int V = 5;
+    vector<vector<pii>> adj(V);
+
+    auto addEdge = [&](int u, int v, int w) {
+        adj[u].push_back({w, v});
+        adj[v].push_back({w, u}); // Undirected
+    };
+
+    addEdge(0, 1, 4);
+    addEdge(0, 2, 1);
+    addEdge(1, 2, 2);
+    addEdge(1, 3, 5);
+    addEdge(2, 3, 8);
+    addEdge(2, 4, 2);
+    addEdge(3, 4, 3);
+
+    cout << "=== DIJKSTRA SHORTEST PATH ===\n";
+    auto dist = dijkstra(adj, 0, V);
+    for (int i = 0; i < V; i++)
+        cout << "0 → " << i << " = " << dist[i] << "\n";
+    // Expected: 0,3,1,6,3
+
+    cout << "\n=== SHORTEST PATH RECONSTRUCTION ===\n";
+    vector<int> parent;
+    auto dist2 = dijkstraWithPath(adj, 0, V, parent);
+    cout << "Path from 0 to 3: ";
+    printPath(parent, 3);
+    cout << " (distance: " << dist2[3] << ")\n";
+
+    return 0;
+}
