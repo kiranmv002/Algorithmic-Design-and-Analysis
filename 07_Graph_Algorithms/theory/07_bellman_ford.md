@@ -18,3 +18,25 @@ If negative cycle exists:
 → No shortest path (can go around cycle forever)
 → Distance keeps decreasing → -∞
 
+## Why V-1 iterations?
+Shortest path between any two vertices
+in a graph with V vertices has at most V-1 edges.
+(Assuming no negative cycles)
+
+After i iterations:
+Shortest paths using at most i edges are correct.
+After V-1 iterations: all shortest paths found.
+
+## Negative Cycle Detection
+After V-1 iterations, try relaxing once more.
+If any distance decreases → NEGATIVE CYCLE exists!
+
+## Bellman-Ford vs Dijkstra
+
+| Feature | Bellman-Ford | Dijkstra |
+|---------|-------------|---------|
+| Negative weights | YES | NO |
+| Negative cycles | Detects | Cannot handle |
+| Time | O(VE) | O((V+E)logV) |
+| Approach | DP/Relaxation | Greedy |
+| Distributed | Yes | No |
