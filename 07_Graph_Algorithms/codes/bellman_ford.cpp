@@ -32,3 +32,13 @@ bool bellmanFord(int V, vector<Edge>& edges, int src,
             return false; // Negative cycle exists
     }
     return true;
+}
+
+int main() {
+    cout << "=== BELLMAN-FORD (GRAPH VERSION) ===\n\n";
+
+    int V = 5;
+    vector<Edge> edges = {
+        {0,1,6}, {0,2,7}, {1,2,8}, {1,3,-4},
+        {1,4,5}, {2,3,9}, {2,4,-3}, {3,0,2}, {4,3,7}
+    };
