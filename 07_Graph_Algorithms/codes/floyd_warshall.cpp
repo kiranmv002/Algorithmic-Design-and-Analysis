@@ -38,3 +38,29 @@ int main() {
         {5,   INF, 0,   1  },
         {2,   INF, INF, 0  }
     };
+
+    // next[i][j] = next vertex on path from i to j
+    vector<vector<int>> next(V, vector<int>(V, -1));
+    for (int i = 0; i < V; i++)
+        for (int j = 0; j < V; j++)
+            if (dist[i][j] != INF && i != j)
+                next[i][j] = j;
+
+    cout << "=== FLOYD-WARSHALL (GRAPH VERSION) ===\n\n";
+    floydWarshall(dist, next, V);
+
+    cout << "All Pairs Shortest Distances:\n";
+    for (int i = 0; i < V; i++) {
+        for (int j = 0; j < V; j++) {
+            if (dist[i][j] == INF) cout << "INF ";
+            else cout << dist[i][j] << "   ";
+        }
+        cout << "\n";
+    }
+
+    cout << "\nShortest path from 1 to 3: ";
+    printPath(next, 1, 3);
+    cout << " (distance: " << dist[1][3] << ")\n";
+
+    return 0;
+}
