@@ -46,3 +46,25 @@ int kruskalMST(int V, vector<Edge>& edges,
         }
     }
     return totalWeight;
+}
+
+int main() {
+    cout << "=== KRUSKAL'S MST (GRAPH VERSION) ===\n\n";
+
+    int V = 5;
+    vector<Edge> edges = {
+        {0,1,2}, {0,3,6}, {1,2,3}, {1,3,8},
+        {1,4,5}, {2,4,7}, {3,4,9}
+    };
+
+    vector<Edge> mstEdges;
+    int totalWeight = kruskalMST(V, edges, mstEdges);
+
+    cout << "MST Edges:\n";
+    for (auto& e : mstEdges)
+        cout << e.u << " - " << e.v << "  weight: " << e.weight << "\n";
+    cout << "\nTotal MST Weight: " << totalWeight << "\n";
+    // Expected: 0-1(2), 1-2(3), 1-4(5), 0-3(6) → Total: 16
+
+    return 0;
+}
