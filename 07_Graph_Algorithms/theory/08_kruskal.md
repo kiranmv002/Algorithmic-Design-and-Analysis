@@ -25,3 +25,17 @@ This PROVES Kruskal's greedy choice is correct!
 ## Union-Find Operations
 find(x): Which component does x belong to?
 union(x,y): Merge components of x and y.
+
+Path Compression: Speeds up find() to nearly O(1)
+Union by Rank: Keeps tree balanced
+
+## Kruskal vs Prim Detailed
+
+| Feature | Kruskal | Prim |
+|---------|---------|------|
+| Strategy | Add min edge globally | Add min edge from tree |
+| Data Structure | Union-Find | Priority Queue |
+| Graph Type | Works on disconnected | Connected only |
+| Dense graphs | Slower | Faster |
+| Sparse graphs | Faster | Slower |
+| Time | O(E log E) | O((V+E) log V) |
