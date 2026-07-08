@@ -36,3 +36,20 @@ If we reach a GRAY vertex → BACK EDGE → CYCLE!
 
 Example:
 0 → 1 → 2 → 0 (cycle!)
+
+DFS: color[0]=GRAY → color[1]=GRAY
+→ color[2]=GRAY → neighbor 0 is GRAY
+→ CYCLE DETECTED! ✅
+
+## Union-Find Method (Undirected)
+For each edge (u,v):
+If find(u) == find(v) → CYCLE EXISTS!
+Else union(u, v)
+
+## Comparison
+
+| Method | Graph Type | Time | Space |
+|--------|-----------|------|-------|
+| DFS + Parent | Undirected | O(V+E) | O(V) |
+| DFS + Color | Directed | O(V+E) | O(V) |
+| Union-Find | Undirected | O(E α(V)) | O(V) |
