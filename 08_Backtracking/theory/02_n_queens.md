@@ -17,3 +17,25 @@ Solving a maze:
 → Hit dead end → BACKTRACK
 → Try going LEFT → reaches exit ✅
 
+## Template / Pattern
+void backtrack(state):
+if isGoal(state):
+record solution
+return
+for each choice in choices(state):
+    if isValid(choice, state):
+        make choice         ← CHOOSE
+        backtrack(state)    ← EXPLORE
+        undo choice         ← UNCHOOSE (backtrack)
+
+## Three Key Steps
+1. CHOOSE   → Make a decision
+2. EXPLORE  → Recurse deeper
+3. UNCHOOSE → Undo decision (backtrack)
+
+## Pruning
+Key optimization in backtracking.
+If current partial solution CANNOT lead to
+a valid solution → prune that branch entirely.
+Avoids exploring unnecessary paths.
+
