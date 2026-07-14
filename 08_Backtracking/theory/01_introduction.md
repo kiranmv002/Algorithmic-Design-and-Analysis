@@ -46,3 +46,24 @@ Avoids exploring unnecessary paths.
 | Speed | Slow | Faster |
 | Space | Same | Same |
 | Smartness | None | Prunes early |
+
+## When to Use Backtracking?
+→ Constraint satisfaction problems
+→ Finding ALL solutions
+→ Finding ONE valid arrangement
+→ When problem has multiple choices at each step
+
+## Common Backtracking Problems
+| Problem | Goal |
+|---------|------|
+| N-Queens | Place N queens safely |
+| Rat in Maze | Find path from start to end |
+| Subset Sum | Find subset adding to target |
+| Graph Coloring | Color graph with K colors |
+| Sudoku | Fill 9×9 grid |
+| Hamiltonian Path | Visit all vertices once |
+
+## Time Complexity
+Backtracking is exponential in WORST case.
+Pruning reduces average case significantly.
+O(b^d) where b = branching factor, d = depth
