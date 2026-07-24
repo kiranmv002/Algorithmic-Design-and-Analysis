@@ -9,6 +9,7 @@ Finds Single Source Shortest Path (SSSP)
 in weighted graph with NON-NEGATIVE weights.
 
 ## Key Data Structures
+```
 Priority Queue (Min Heap):
 → Always process vertex with minimum distance
 → O(log V) for insert and extract
@@ -18,7 +19,7 @@ Distance Array:
 
 Visited Array:
 → Avoid reprocessing vertices
-
+```
 ## Relaxation
 ```
 Core operation in Dijkstra:
