@@ -1,11 +1,12 @@
 # Cycle Detection in Graphs
 
 ## Why Detect Cycles?
+```
 → Deadlock detection in OS
 → Dependency resolution
 → Topological sort (needs acyclic graph)
 → Circuit analysis
-
+```
 ## Cycle in Undirected Graph
 
 ### Method: DFS with Parent Tracking
