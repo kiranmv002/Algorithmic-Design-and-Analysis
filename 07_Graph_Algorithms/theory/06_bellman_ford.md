@@ -5,10 +5,11 @@ Covered in Week 5 (Dynamic Programming).
 Here we focus on GRAPH perspective.
 
 ## When to Use Bellman-Ford?
+```
 → Graph has NEGATIVE weight edges
 → Need to detect NEGATIVE CYCLES
 → Distributed systems (each node computes own distances)
-
+```
 ## Negative Cycle
 ```
 A cycle whose total weight is NEGATIVE.
