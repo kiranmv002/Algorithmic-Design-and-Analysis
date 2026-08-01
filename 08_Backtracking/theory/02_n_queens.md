@@ -10,6 +10,7 @@ lead to a valid complete solution → BACKTRACK!
 (Undo last step and try another option)
 
 ## Real Life Analogy
+```
 Solving a maze:
 → Try going RIGHT
 → Hit dead end → BACKTRACK
@@ -17,7 +18,10 @@ Solving a maze:
 → Hit dead end → BACKTRACK
 → Try going LEFT → reaches exit ✅
 
+```
+
 ## Template / Pattern
+```
 void backtrack(state):
 if isGoal(state):
 record solution
@@ -32,6 +36,7 @@ for each choice in choices(state):
 1. CHOOSE   → Make a decision
 2. EXPLORE  → Recurse deeper
 3. UNCHOOSE → Undo decision (backtrack)
+```
 
 ## Pruning
 Key optimization in backtracking.
