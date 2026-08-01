@@ -31,12 +31,13 @@ for each choice in choices(state):
         make choice         ← CHOOSE
         backtrack(state)    ← EXPLORE
         undo choice         ← UNCHOOSE (backtrack)
+```
 
 ## Three Key Steps
 1. CHOOSE   → Make a decision
 2. EXPLORE  → Recurse deeper
 3. UNCHOOSE → Undo decision (backtrack)
-```
+
 
 ## Pruning
 Key optimization in backtracking.
