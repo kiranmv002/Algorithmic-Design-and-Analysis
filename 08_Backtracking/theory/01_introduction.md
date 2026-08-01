@@ -10,14 +10,17 @@ lead to a valid complete solution → BACKTRACK!
 (Undo last step and try another option)
 
 ## Real Life Analogy
+```
 Solving a maze:
 → Try going RIGHT
 → Hit dead end → BACKTRACK
 → Try going DOWN
 → Hit dead end → BACKTRACK
 → Try going LEFT → reaches exit ✅
+```
 
 ## Template / Pattern
+```
 void backtrack(state):
 if isGoal(state):
 record solution
@@ -27,6 +30,7 @@ for each choice in choices(state):
         make choice         ← CHOOSE
         backtrack(state)    ← EXPLORE
         undo choice         ← UNCHOOSE (backtrack)
+```
 
 ## Three Key Steps
 1. CHOOSE   → Make a decision
@@ -48,10 +52,12 @@ Avoids exploring unnecessary paths.
 | Smartness | None | Prunes early |
 
 ## When to Use Backtracking?
+```
 → Constraint satisfaction problems
 → Finding ALL solutions
 → Finding ONE valid arrangement
 → When problem has multiple choices at each step
+```
 
 ## Common Backtracking Problems
 | Problem | Goal |
