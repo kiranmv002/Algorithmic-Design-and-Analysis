@@ -5,10 +5,11 @@ Place N queens on an N×N chessboard such that
 NO two queens attack each other.
 
 Queens attack:
+```
 → Same row
 → Same column
 → Same diagonal (both diagonals)
-
+```
 ## Example: 4-Queens
 ```
 One valid solution:
@@ -40,6 +41,7 @@ For queen at (row, col):
    → same as above (same formula covers both)
 ```
 ## Step by Step: 4-Queens
+```
 Row 0: Try col 0
        Safe! → board = [0, _, _, _]
 
@@ -71,7 +73,7 @@ Row 1: No more columns → BACKTRACK!
 
 Row 0: Try col 1 → Safe! → board = [1, _, _, _]
        ... (continues until solution found)
-
+```
 ## Solutions Count
 | N | Solutions |
 |---|-----------|
@@ -83,3 +85,8 @@ Row 0: Try col 1 → Safe! → board = [1, _, _, _]
 | 6 | 4 |
 | 7 | 40 |
 | 8 | 92 |
+
+## Complexity
+Time:  O(N!) — N choices for row 0,
+               N-1 for row 1, etc.
+Space: O(N)  — board array + recursion stack
