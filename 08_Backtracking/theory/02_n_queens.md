@@ -1,47 +1,40 @@
-# Backtracking — Introduction
+# N-Queens Problem
 
-## What is Backtracking?
-Backtracking is a systematic way of trying out
-different possibilities to find a solution.
+## Problem Statement
+Place N queens on an N×N chessboard such that
+NO two queens attack each other.
 
-It builds the solution INCREMENTALLY.
-If at any point the partial solution CANNOT
-lead to a valid complete solution → BACKTRACK!
-(Undo last step and try another option)
+Queens attack:
+→ Same row
+→ Same column
+→ Same diagonal (both diagonals)
 
-## Real Life Analogy
-```
-Solving a maze:
-→ Try going RIGHT
-→ Hit dead end → BACKTRACK
-→ Try going DOWN
-→ Hit dead end → BACKTRACK
-→ Try going LEFT → reaches exit ✅
+## Example: 4-Queens
 
-```
+One valid solution:
+. Q . .
+. . . Q
+Q . . .
+. . Q .
 
-## Template / Pattern
-```
-void backtrack(state):
-if isGoal(state):
-record solution
-return
-for each choice in choices(state):
-    if isValid(choice, state):
-        make choice         ← CHOOSE
-        backtrack(state)    ← EXPLORE
-        undo choice         ← UNCHOOSE (backtrack)
-```
+Queens at: (0,1), (1,3), (2,0), (3,2)
 
-## Three Key Steps
-1. CHOOSE   → Make a decision
-2. EXPLORE  → Recurse deeper
-3. UNCHOOSE → Undo decision (backtrack)
+## Backtracking Approach
+Place queens ROW by ROW.
+For each row try each column.
+Check if placement is SAFE.
+If safe → place queen → go to next row.
+If no safe column → BACKTRACK to previous row.
 
+## Safety Check
+For queen at (row, col):
+1. No queen in same column
+   → board[i] != col for all i < row
 
-## Pruning
-Key optimization in backtracking.
-If current partial solution CANNOT lead to
-a valid solution → prune that branch entirely.
-Avoids exploring unnecessary paths.
+2. No queen in left diagonal
+   → abs(board[i] - col) != abs(i - row)
+   for all i < row
+
+3. No queen in right diagonal
+   → same as above (same formula covers both)
 
