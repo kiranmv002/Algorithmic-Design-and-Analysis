@@ -50,3 +50,26 @@ void solveNQueens(vector<int>& board, int row,
     }
 }
 
+int main() {
+    cout << "=== N-QUEENS PROBLEM ===\n\n";
+
+    // Count solutions for N = 1 to 8
+    cout << "Number of solutions:\n";
+    for (int N = 1; N <= 8; N++) {
+        vector<int> board(N, -1);
+        int count = 0;
+        solveNQueens(board, 0, N, count, false);
+        cout << N << "-Queens: " << count
+             << " solutions\n";
+    }
+
+    // Print all solutions for 4-Queens
+    cout << "\n=== ALL SOLUTIONS FOR 4-QUEENS ===\n";
+    int N = 4;
+    vector<int> board(N, -1);
+    int count = 0;
+    solveNQueens(board, 0, N, count, true);
+    cout << "Total solutions: " << count << "\n";
+
+    return 0;
+}
