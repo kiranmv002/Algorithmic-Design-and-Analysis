@@ -10,13 +10,13 @@ Queens attack:
 → Same diagonal (both diagonals)
 
 ## Example: 4-Queens
-
+```
 One valid solution:
 . Q . .
 . . . Q
 Q . . .
 . . Q .
-
+```
 Queens at: (0,1), (1,3), (2,0), (3,2)
 
 ## Backtracking Approach
@@ -27,6 +27,7 @@ If safe → place queen → go to next row.
 If no safe column → BACKTRACK to previous row.
 
 ## Safety Check
+```
 For queen at (row, col):
 1. No queen in same column
    → board[i] != col for all i < row
@@ -37,7 +38,7 @@ For queen at (row, col):
 
 3. No queen in right diagonal
    → same as above (same formula covers both)
-
+```
 ## Step by Step: 4-Queens
 Row 0: Try col 0
        Safe! → board = [0, _, _, _]
