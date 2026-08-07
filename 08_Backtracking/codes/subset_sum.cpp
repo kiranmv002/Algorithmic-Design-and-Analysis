@@ -62,3 +62,36 @@ void generateAllSubsets(vector<int>& arr, int idx,
     }
 }
 
+int main() {
+    cout << "=== SUBSET SUM ===\n\n";
+
+    vector<int> arr = {3, 34, 4, 12, 5, 2};
+    int target1 = 9, target2 = 30;
+
+    cout << "Array: 3 34 4 12 5 2\n\n";
+    cout << "Target " << target1 << ": "
+         << (subsetExists(arr, 0, 0, target1)
+             ? "EXISTS" : "NOT FOUND") << "\n"; // EXISTS
+
+    cout << "Target " << target2 << ": "
+         << (subsetExists(arr, 0, 0, target2)
+             ? "EXISTS" : "NOT FOUND") << "\n\n"; // NOT FOUND
+
+    // Find all subsets summing to 9
+    cout << "All subsets summing to " << target1 << ":\n";
+    vector<int> chosen;
+    vector<vector<int>> result;
+    findAllSubsets(arr, 0, 0, target1, chosen, result);
+    for (auto& s : result) {
+        cout << "{ ";
+        for (int x : s) cout << x << " ";
+        cout << "}\n";
+    }
+
+    // Generate all subsets of {1,2,3}
+    cout << "\nAll subsets of {1, 2, 3}:\n";
+    vector<int> small = {1, 2, 3}, cur;
+    generateAllSubsets(small, 0, cur);
+
+    return 0;
+}
