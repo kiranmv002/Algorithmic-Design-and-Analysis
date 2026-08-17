@@ -34,3 +34,21 @@ bool graphColoring(vector<vector<int>>& adj,
     return false; // No valid coloring
 }
 
+// Find minimum colors needed (chromatic number)
+int chromaticNumber(vector<vector<int>>& adj, int V) {
+    for (int K = 1; K <= V; K++) {
+        vector<int> color(V, 0);
+        if (graphColoring(adj, color, 0, V, K))
+            return K;
+    }
+    return V;
+}
+
+void printColoring(vector<int>& color, int V) {
+    string colorNames[] = {"", "Red", "Blue",
+                            "Green", "Yellow"};
+    for (int i = 0; i < V; i++)
+        cout << "Vertex " << i << " → "
+             << colorNames[color[i]] << "\n";
+}
+
