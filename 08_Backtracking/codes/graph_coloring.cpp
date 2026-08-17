@@ -52,3 +52,28 @@ void printColoring(vector<int>& color, int V) {
              << colorNames[color[i]] << "\n";
 }
 
+int main() {
+    cout << "=== GRAPH COLORING ===\n\n";
+
+    int V = 4;
+    vector<vector<int>> adj(V);
+
+    auto addEdge = [&](int u, int v) {
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    };
+
+    // Graph: cycle of 4 vertices
+    addEdge(0, 1); addEdge(1, 2);
+    addEdge(2, 3); addEdge(3, 0);
+
+    cout << "Graph: 0-1-2-3-0 (cycle)\n\n";
+
+    int K = 3;
+    vector<int> color(V, 0);
+
+    if (graphColoring(adj, color, 0, V, K)) {
+        cout << "Coloring with " << K
+             << " colors: POSSIBLE\n";
+        printColoring(color, V);
+    } else {
