@@ -87,6 +87,8 @@ Row 0: Try col 1 → Safe! → board = [1, _, _, _]
 | 8 | 92 |
 
 ## Complexity
+```
 Time:  O(N!) — N choices for row 0,
                N-1 for row 1, etc.
 Space: O(N)  — board array + recursion stack
+```
