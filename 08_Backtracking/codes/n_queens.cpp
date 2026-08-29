@@ -73,3 +73,10 @@ int main() {
 
     return 0;
 }
+    int N = 4;
+    vector<int> board(N, -1);
+    int count = 0;
+    solveNQueens(board, 0, N, count, true);
+    cout << "Total solutions: " << count << "\n";
+
+    return 0;
