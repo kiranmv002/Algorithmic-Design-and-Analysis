@@ -21,11 +21,13 @@ Q . . .
 Queens at: (0,1), (1,3), (2,0), (3,2)
 
 ## Backtracking Approach
+```
 Place queens ROW by ROW.
 For each row try each column.
 Check if placement is SAFE.
 If safe → place queen → go to next row.
 If no safe column → BACKTRACK to previous row.
+```
 
 ## Safety Check
 ```
