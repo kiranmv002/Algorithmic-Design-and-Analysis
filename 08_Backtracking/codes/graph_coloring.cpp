@@ -76,4 +76,7 @@ int main() {
         cout << "Coloring with " << K
              << " colors: POSSIBLE\n";
         printColoring(color, V);
-    } else {
+    } else {raphColoring(adj, color, 0, V, K)) {
+        cout << "Coloring with " << K
+             << " colors: POSSIBLE\n
+
