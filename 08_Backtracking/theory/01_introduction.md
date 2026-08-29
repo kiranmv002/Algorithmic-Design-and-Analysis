@@ -70,6 +70,8 @@ Avoids exploring unnecessary paths.
 | Hamiltonian Path | Visit all vertices once |
 
 ## Time Complexity
+```
 Backtracking is exponential in WORST case.
 Pruning reduces average case significantly.
 O(b^d) where b = branching factor, d = depth
+```
