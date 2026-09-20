@@ -48,13 +48,14 @@ BFS gives SHORTEST PATH in UNWEIGHTED graphs.
 Level of vertex = shortest distance from source.
 
 ## Applications
+```
 → Shortest path in unweighted graph
 → Level order traversal of tree
 → Finding connected components
 → Bipartite graph checking
 → Web crawlers
 → Social network friend suggestions
-
+```
 ## Complexity
 | | Time | Space |
 |-|------|-------|
