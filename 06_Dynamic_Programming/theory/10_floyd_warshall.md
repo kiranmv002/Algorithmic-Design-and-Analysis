@@ -8,9 +8,10 @@ Does NOT work with negative cycles.
 Called: All-Pairs Shortest Path (APSP)
 
 ## Key Idea
+```
 For each intermediate vertex k:
 Check if path i→k→j is shorter than direct i→j.
-
+```
 ## DP Approach
 ```
 ### Step 1: Define Subproblem
@@ -62,8 +63,9 @@ Final shortest paths:
 1→3 = 3 (via 2: 1→2→3 = 2+1 = 3)
 ```
 ## Negative Cycle Detection
+```
 If dp[i][i] < 0 after algorithm → negative cycle exists!
-
+```
 ## Dijkstra vs Bellman-Ford vs Floyd-Warshall
 
 | Algorithm | Type | Negative | Time | APSP |
