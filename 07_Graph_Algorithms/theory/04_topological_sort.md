@@ -10,13 +10,14 @@ Only works on DAG (Directed Acyclic Graph).
 If cycle exists → topological sort NOT possible.
 
 ## Real Life Examples
+```
 → Course prerequisites
   (Take Math before Physics)
 → Build systems
   (Compile A before B which needs A)
 → Task scheduling
   (Do task A before task B)
-
+```
 ## Example
 ```
 DAG:
