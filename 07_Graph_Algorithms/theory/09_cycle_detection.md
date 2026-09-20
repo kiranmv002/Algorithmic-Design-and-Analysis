@@ -47,10 +47,11 @@ DFS: color[0]=GRAY → color[1]=GRAY
 → CYCLE DETECTED! ✅
 ```
 ## Union-Find Method (Undirected)
+```
 For each edge (u,v):
 If find(u) == find(v) → CYCLE EXISTS!
 Else union(u, v)
-
+```
 ## Comparison
 
 | Method | Graph Type | Time | Space |
