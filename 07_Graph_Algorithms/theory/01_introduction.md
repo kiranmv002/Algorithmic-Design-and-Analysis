@@ -6,11 +6,12 @@ V = set of vertices (nodes)
 E = set of edges (connections)
 
 ## Real Life Examples
+```
 → Google Maps    → Cities = vertices, Roads = edges
 → Social Network → People = vertices, Friendship = edges
 → Internet       → Computers = vertices, Links = edges
 → Circuit Board  → Components = vertices, Wires = edges
-
+```
 ## Types of Graphs
 ```
 ### 1. Directed vs Undirected
