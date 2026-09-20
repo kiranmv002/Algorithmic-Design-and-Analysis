@@ -18,19 +18,21 @@ Example: K4 (4 vertices) has 4^2 = 16 spanning trees!
 MST selects the ONE with minimum total weight.
 ```
 ## Cut Property (Why Greedy Works)
+```
 For any cut of the graph into two sets S and V-S:
 The minimum weight edge crossing the cut
 is always in some MST.
 
 This PROVES Kruskal's greedy choice is correct!
-
+```
 ## Union-Find Operations
+```
 find(x): Which component does x belong to?
 union(x,y): Merge components of x and y.
 
 Path Compression: Speeds up find() to nearly O(1)
 Union by Rank: Keeps tree balanced
-
+```
 ## Kruskal vs Prim Detailed
 
 | Feature | Kruskal | Prim |
