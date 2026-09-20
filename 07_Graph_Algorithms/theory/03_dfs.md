@@ -47,13 +47,14 @@ DFS Order: 0 1 3 4 2
 | Complete | Yes | Yes |
 
 ## Applications
+```
 → Cycle detection in graphs
 → Topological sorting
 → Strongly connected components
 → Maze solving
 → Path finding
 → Tree traversals (pre/in/post order)
-
+```
 ## DFS Properties
 Discovery time: When vertex first visited
 Finish time: When all neighbors explored
