@@ -6,10 +6,11 @@ Works with NEGATIVE edge weights.
 Detects NEGATIVE CYCLES.
 
 ## Why Not Dijkstra for Negative Edges?
+```
 Dijkstra marks vertex as done permanently.
 With negative edges, a longer path might
 become shorter later → Dijkstra misses this!
-
+```
 ## Key Idea
 Relax ALL edges V-1 times.
 After V-1 iterations, shortest paths are finalized.
