@@ -37,13 +37,15 @@ BLACK = fully processed
 
 If we reach a GRAY vertex → BACK EDGE → CYCLE!
 ```
+
 Example:
+```
 0 → 1 → 2 → 0 (cycle!)
 
 DFS: color[0]=GRAY → color[1]=GRAY
 → color[2]=GRAY → neighbor 0 is GRAY
 → CYCLE DETECTED! ✅
-
+```
 ## Union-Find Method (Undirected)
 For each edge (u,v):
 If find(u) == find(v) → CYCLE EXISTS!
