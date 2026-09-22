@@ -36,6 +36,7 @@ Array = {3, 4, 2}, Target = 5
            (5)✅  (3)  (6)  (4) (2) (0)
 
 ## Pruning Strategies
+```
 1. If sum > target → prune (no point going deeper)
 2. If remaining elements cannot reach target → prune
-
+```
