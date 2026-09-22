@@ -33,10 +33,11 @@ for each choice in choices(state):
 ```
 
 ## Three Key Steps
+```
 1. CHOOSE   → Make a decision
 2. EXPLORE  → Recurse deeper
 3. UNCHOOSE → Undo decision (backtrack)
-
+```
 ## Pruning
 Key optimization in backtracking.
 If current partial solution CANNOT lead to
