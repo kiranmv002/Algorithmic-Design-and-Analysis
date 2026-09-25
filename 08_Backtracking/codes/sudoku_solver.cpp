@@ -29,3 +29,16 @@ bool isSafe(vector<vector<int>>& grid, int row,
 
     return true;
 }
+
+// Find next empty cell
+bool findEmpty(vector<vector<int>>& grid,
+               int& row, int& col) {
+    for (row = 0; row < 9; row++)
+        for (col = 0; col < 9; col++)
+            if (grid[row][col] == 0) return true;
+    return false; // No empty cell → solved!
+}
+
+// Solve sudoku using backtracking
+bool solveSudoku(vector<vector<int>>& grid) {
+    int row, col;
