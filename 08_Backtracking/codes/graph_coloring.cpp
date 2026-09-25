@@ -76,7 +76,25 @@ int main() {
         cout << "Coloring with " << K
              << " colors: POSSIBLE\n";
         printColoring(color, V);
-    } else {raphColoring(adj, color, 0, V, K)) {
+    } else {
         cout << "Coloring with " << K
-             << " colors: POSSIBLE\n
+             << " colors: NOT POSSIBLE\n";
+    }
 
+    cout << "\nChromatic number: "
+         << chromaticNumber(adj, V) << "\n"; // 2
+
+    // Complete graph K4 (needs 4 colors)
+    cout << "\n=== COMPLETE GRAPH K4 ===\n";
+    int V2 = 4;
+    vector<vector<int>> adj2(V2);
+    for (int i = 0; i < V2; i++)
+        for (int j = i+1; j < V2; j++) {
+            adj2[i].push_back(j);
+            adj2[j].push_back(i);
+        }
+    cout << "Chromatic number of K4: "
+         << chromaticNumber(adj2, V2) << "\n"; // 4
+
+    return 0;
+}
