@@ -89,3 +89,13 @@ int main() {
 
     cout << "Input Sudoku:\n";
     printGrid(grid);
+
+    if (solveSudoku(grid)) {
+        cout << "\nSolved Sudoku:\n";
+        printGrid(grid);
+    } else {
+        cout << "\nNo solution exists!\n";
+    }
+
+    return 0;
+}
