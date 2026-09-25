@@ -42,3 +42,30 @@ bool findEmpty(vector<vector<int>>& grid,
 // Solve sudoku using backtracking
 bool solveSudoku(vector<vector<int>>& grid) {
     int row, col;
+
+    // No empty cell → puzzle solved
+    if (!findEmpty(grid, row, col)) return true;
+
+    for (int num = 1; num <= 9; num++) {
+        if (isSafe(grid, row, col, num)) {
+            grid[row][col] = num;              // CHOOSE
+
+            if (solveSudoku(grid)) return true;// EXPLORE
+
+            grid[row][col] = 0;                // UNCHOOSE
+        }
+    }
+    return false; // Trigger backtrack
+}
+
+void printGrid(vector<vector<int>>& grid) {
+    for (int i = 0; i < 9; i++) {
+        if (i % 3 == 0 && i != 0)
+            cout << "------+-------+------\n";
+        for (int j = 0; j < 9; j++) {
+            if (j % 3 == 0 && j != 0) cout << "| ";
+            cout << grid[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
