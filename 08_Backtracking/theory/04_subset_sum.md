@@ -16,10 +16,13 @@ Subsets that sum to 9:
 {4, 5}    → 4+5 = 9 ✅
 ```
 ## Backtracking Approach
+{4, 5}    → 4+5 = 9 ✅
+```
 For each element → two choices:
 1. INCLUDE the element
 2. EXCLUDE the element
-
+{4, 5}    → 4+5 = 9 ✅
+```
 Build decision tree exploring both choices.
 Prune when current sum > target.
 
