@@ -58,7 +58,7 @@ void generateAllSubsets(vector<int>& arr, int idx,
     for (int i = idx; i < (int)arr.size(); i++) {
         current.push_back(arr[i]);          // CHOOSE
         generateAllSubsets(arr, i+1, current); // EXPLORE
-        current.pop_back();                 // UNCHOOSE
+        current.pop_back();                 
     }
 }
 
