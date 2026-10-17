@@ -22,10 +22,10 @@ For each element → two choices:
 1. INCLUDE the element
 2. EXCLUDE the element
 {4, 5}    → 4+5 = 9 ✅
-```
+
 Build decision tree exploring both choices.
 Prune when current sum > target.
-
+```
 ## Decision Tree (simplified)
 Array = {3, 4, 2}, Target = 5
 
