@@ -81,3 +81,26 @@ int main() {
         {1,1,0,0,1},
         {0,1,1,1,0}
     };
+
+    // Hamiltonian Path
+    vector<int> path(V, -1);
+    path[0] = 0; // Start from vertex 0
+
+    cout << "Hamiltonian PATH:\n";
+    if (hamiltonianPath(adj, path, 1, V)) {
+        printPath(path, false);
+    } else {
+        cout << "No Hamiltonian Path exists!\n";
+    }
+
+    // Hamiltonian Cycle
+    fill(path.begin(), path.end(), -1);
+    path[0] = 0;
+
+    cout << "\nHamiltonian CYCLE:\n";
+    if (hamiltonianCycle(adj, path, 1, V)) {
+        printPath(path, true);
+    } else {
+        cout << "No Hamiltonian Cycle exists!\n";
+    }
+
