@@ -25,14 +25,14 @@ Graph:
 0 — 1
 |   |
 3 — 2
-```
+
 Valid 3-coloring:
 0 = Red
 1 = Blue
 2 = Red
 3 = Blue
 (0 and 2 not adjacent → can be same color)
-
+```
 ## Backtracking Approach
 For each vertex (in order 0 to V-1):
 Try each color (1 to K):
