@@ -39,3 +39,34 @@ Try each color (1 to K):
   If color is SAFE (no adjacent vertex has same color):
     Assign color → go to next vertex
   If no color works → BACKTRACK
+
+## Safety Check
+For vertex u with color c:
+Check all neighbors of u.
+If any neighbor has color c → UNSAFE!
+
+## Step by Step
+Graph: 0-1, 1-2, 2-3, 3-0 (cycle)
+K = 3 colors
+
+Vertex 0: Try color 1 → Safe ✅ → color[0]=1
+Vertex 1: Try color 1 → UNSAFE (adj to 0)
+           Try color 2 → Safe ✅ → color[1]=2
+Vertex 2: Try color 1 → UNSAFE (adj to 1? No!)
+           Wait, 1 and 2 are adjacent
+           Try color 1 → UNSAFE (adj to 1=color2? No)
+           color[2]=1 ← Wait, check adj:
+           neighbor of 2 is 1(color=2) and 3(uncolored)
+           color 1 ≠ color[1]=2 → SAFE ✅ → color[2]=1
+Vertex 3: neighbors are 2(color=1) and 0(color=1)
+           Try color 1 → UNSAFE
+           Try color 2 → UNSAFE (adj to 0? No, 0 has color 1)
+           color[3] = 2 ← neighbor 0 has color 1 ≠ 2 ✅
+                          neighbor 2 has color 1 ≠ 2 ✅
+           SAFE! → color[3]=2
+
+Result: colors = [1, 2, 1, 2] ✅
+
+## Complexity
+Time:  O(K^V) — K choices for V vertices
+Space: O(V)   — color array + recursion stack
