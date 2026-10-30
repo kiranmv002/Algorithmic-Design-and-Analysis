@@ -21,10 +21,11 @@ Any planar map can be colored with just 4 colors!
 
 ## Example (K=3 colors)
 Graph:
+```
 0 — 1
 |   |
 3 — 2
-
+```
 Valid 3-coloring:
 0 = Red
 1 = Blue
