@@ -104,3 +104,18 @@ int main() {
         cout << "No Hamiltonian Cycle exists!\n";
     }
 
+    // Graph with no Hamiltonian cycle
+    cout << "\n=== GRAPH WITH NO HAMILTONIAN CYCLE ===\n";
+    int V2 = 3;
+    vector<vector<int>> adj2 = {
+        {0,1,0},
+        {1,0,0},
+        {0,0,0}
+    };
+    vector<int> path2(V2, -1);
+    path2[0] = 0;
+    if (!hamiltonianCycle(adj2, path2, 1, V2))
+        cout << "No Hamiltonian Cycle exists!\n";
+
+    return 0;
+}
