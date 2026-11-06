@@ -1,9 +1,9 @@
-// ============================================================
+// ===========================================================
 // FILE: bellman_ford.cpp
 // TOPIC: Bellman-Ford (Graph Algorithms version)
 // TIME:  O(V×E)   SPACE: O(V)
 // Compile: g++ -std=c++17 -o bellman bellman_ford.cpp
-// ============================================================
+// ===========================================================
 #include <iostream>
 #include <vector>
 #include <climits>
