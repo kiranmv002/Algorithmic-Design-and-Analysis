@@ -21,7 +21,7 @@ struct Node {
 
 struct Compare {
     bool operator()(Node* a, Node* b) {
-        return a->freq > b->freq; // Min heap
+        return a->freq > b->freq; 
     }
 };
 
