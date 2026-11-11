@@ -12,12 +12,13 @@ Go as deep as possible in one direction.
 If stuck → backtrack and try another direction.
 
 ## Algorithm Steps
+```
 1. Start at source vertex
 2. Mark it visited
 3. For each unvisited neighbor v:
    - Recursively DFS(v)
 4. Backtrack when no unvisited neighbors
-
+```
 ## Example
 ```
 Graph:
