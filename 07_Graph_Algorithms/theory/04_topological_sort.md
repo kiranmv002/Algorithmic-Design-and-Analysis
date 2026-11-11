@@ -6,9 +6,10 @@ for every directed edge u→v,
 vertex u comes BEFORE vertex v.
 
 ## Key Requirement
+```
 Only works on DAG (Directed Acyclic Graph).
 If cycle exists → topological sort NOT possible.
-
+```
 ## Real Life Examples
 ```
 → Course prerequisites
