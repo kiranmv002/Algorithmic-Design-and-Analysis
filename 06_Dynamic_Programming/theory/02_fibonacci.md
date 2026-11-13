@@ -9,12 +9,13 @@ F(n) = F(n-1) + F(n-2) for n > 1
 Sequence: 0 1 1 2 3 5 8 13 21 34 55...
 ```
 ## Naive Recursion (BAD)
+```
 T(n) = T(n-1) + T(n-2)
 Solution: O(2ⁿ) — EXPONENTIAL!
 
 For n=50: 2^50 = 1,125,899,906,842,624 operations!
 Completely impractical.
-
+```
 ## Why is it Slow?
 ```
 fib(5) call tree:
