@@ -61,7 +61,7 @@ Space: O(1) ← BEST!
 | Space Optimized | O(n) | O(1) | 2 Variables |
 
 ## Example: fib(6)
-
+```
 Tabulation:
 Index: 0  1  2  3  4  5  6
 Value: 0  1  1  2  3  5  8
@@ -71,3 +71,4 @@ dp[3] = dp[2] + dp[1] = 1 + 1 = 2
 dp[4] = dp[3] + dp[2] = 2 + 1 = 3
 dp[5] = dp[4] + dp[3] = 3 + 2 = 5
 dp[6] = dp[5] + dp[4] = 5 + 3 = 8 ✅
+```
