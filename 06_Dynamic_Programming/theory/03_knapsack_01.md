@@ -18,7 +18,7 @@ Best: item2(20) + item3(30) = value 220 ✅
 Greedy would give wrong answer.
 
 ## DP Approach
-
+```
 ### Step 1: Define Subproblem
 dp[i][w] = maximum value using first i items
            with knapsack capacity w
@@ -39,7 +39,7 @@ dp[i][w] = max(dp[i-1][w],
 ### Step 3: Base Cases
 dp[0][w] = 0 for all w (no items → value 0)
 dp[i][0] = 0 for all i (no capacity → value 0)
-
+```
 ## Example
 Items: weights=[2,3,4,5], values=[3,4,5,6]
 Capacity W = 5
