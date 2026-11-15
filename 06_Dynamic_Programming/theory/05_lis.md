@@ -63,7 +63,9 @@ Much faster for large inputs!
 | Binary Search | O(n log n) | O(n) |
 
 ## Applications
+```
 → Patience sorting card game
 → Box stacking problem
 → Building bridges problem
 → Stock market analysis
+```
