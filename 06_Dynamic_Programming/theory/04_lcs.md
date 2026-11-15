@@ -8,11 +8,12 @@ Subsequence: characters in order but NOT necessarily
 contiguous. Can skip characters.
 
 ## Example
+```
 s1 = "ABCBDAB"
 s2 = "BDCAB"
 
 LCS = "BCAB" or "BDAB" → length 4 ✅
-
+```
 ## DP Approach
 
 ### Step 1: Define Subproblem
