@@ -57,12 +57,13 @@ Edit distance = dp[3][3] = 1
 (Replace A with U) ✅
 ```
 ## Applications
+```
 → Spell checkers
 → DNA sequence alignment
 → Git diff / merge tools
 → Autocorrect in phones
 → Plagiarism detection
-
+```
 ## Complexity
 | | Time | Space |
 |-|------|-------|
