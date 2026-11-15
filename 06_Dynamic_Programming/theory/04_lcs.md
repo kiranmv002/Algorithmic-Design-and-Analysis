@@ -56,11 +56,12 @@ LCS length = dp[4][3] = 3 → "BCB" ✅
 | Edit Distance | Two strings | Min edits to convert |
 
 ## Applications
+```
 → DNA sequence alignment (bioinformatics)
 → File diff tools (git diff)
 → Plagiarism detection
 → Version control systems
-
+```
 ## Complexity
 | | Time | Space |
 |-|------|-------|
