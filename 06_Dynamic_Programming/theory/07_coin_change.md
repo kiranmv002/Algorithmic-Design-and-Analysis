@@ -17,11 +17,12 @@ Possible ways:
 ```
 
 ## Why Greedy Fails?
+```
 Greedy picks largest coin ≤ amount first.
 Coins=[1,3,4], Amount=6
 Greedy: 4+1+1 = 3 coins
 DP: 3+3 = 2 coins ✅ (Greedy is WRONG!)
-
+```
 ## DP Approach
 
 ### Step 1: Define Subproblem
