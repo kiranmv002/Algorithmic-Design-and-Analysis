@@ -13,6 +13,7 @@ Multiplying matrices A(p×q) and B(q×r):
 Cost = p × q × r multiplications
 
 Example: Three matrices
+```
 A = 10×30, B = 30×5, C = 5×60
 
 Option 1: (AB)C
@@ -26,7 +27,7 @@ A(BC) cost = 10×30×60 = 18000
 Total = 27000
 
 Option 1 is 6× FASTER! ✅
-
+```
 ## DP Approach
 
 ### Step 1: Define Subproblem
