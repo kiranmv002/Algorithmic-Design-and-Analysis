@@ -22,7 +22,7 @@ Options:
 Best = 10 (cut into two pieces of length 2)
 
 ## DP Approach
-
+```
 ### Step 1: Define Subproblem
 dp[i] = maximum revenue for rod of length i
 
@@ -32,7 +32,7 @@ dp[i] = max(dp[i], price[j] + dp[i-j])
 
 ### Step 3: Base Cases
 dp[0] = 0 (no rod, no revenue)
-
+```
 ## Example Step by Step
 ```
 Price: [0,1,5,8,9,10,17,17,20]
