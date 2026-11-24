@@ -44,7 +44,7 @@ bool dfsCycleDirected(vector<vector<int>>& adj,
             if (dfsCycleDirected(adj, v, color))
                 return true;
     }
-    color[u] = 2; // BLACK — done
+    color[u] = 2; 
     return false;
 }
 
