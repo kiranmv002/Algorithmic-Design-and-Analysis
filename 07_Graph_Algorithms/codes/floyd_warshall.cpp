@@ -17,7 +17,7 @@ void floydWarshall(vector<vector<int>>& dist,
                 if (dist[i][k] != INF && dist[k][j] != INF &&
                     dist[i][k] + dist[k][j] < dist[i][j]) {
                     dist[i][j] = dist[i][k] + dist[k][j];
-                    next[i][j] = next[i][k]; // Path reconstruction
+                    next[i][j] = next[i][k]; 
                 }
 }
 
