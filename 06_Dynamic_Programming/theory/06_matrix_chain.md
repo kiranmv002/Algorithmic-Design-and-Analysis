@@ -35,13 +35,14 @@ dp[i][j] = minimum cost to multiply
            matrices from i to j
 
 ### Step 2: Recurrence
+```
 For each split point k (i ≤ k < j):
 dp[i][j] = min(dp[i][k] + dp[k+1][j]
                + dims[i-1] × dims[k] × dims[j])
 
 Where dims[] stores dimensions.
 Matrix i has dimensions dims[i-1] × dims[i]
-
+```
 ### Step 3: Base Cases
 dp[i][i] = 0 (single matrix, no multiplication)
 
