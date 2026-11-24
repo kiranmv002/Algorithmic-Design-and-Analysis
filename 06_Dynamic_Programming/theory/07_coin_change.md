@@ -24,7 +24,7 @@ Greedy: 4+1+1 = 3 coins
 DP: 3+3 = 2 coins ✅ (Greedy is WRONG!)
 ```
 ## DP Approach
-
+```
 ### Step 1: Define Subproblem
 dp[i] = minimum coins needed to make amount i
 
@@ -36,7 +36,7 @@ For each coin c in coins:
 ### Step 3: Base Cases
 dp[0] = 0 (0 coins for amount 0)
 dp[i] = infinity initially (impossible)
-
+```
 ## Example Step by Step
 ```
 Coins=[1,5,6,9], Amount=11
