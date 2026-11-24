@@ -18,7 +18,7 @@ struct Edge {
 // Union-Find with path compression + union by rank
 int find(vector<int>& parent, int x) {
     if (parent[x] != x)
-        parent[x] = find(parent, parent[x]); // Path compression
+        parent[x] = find(parent, parent[x]); 
     return parent[x];
 }
 
