@@ -30,7 +30,7 @@ void jobSequencing(vector<Job>& jobs) {
     int totalProfit = 0;
 
     for (auto& job : jobs) {
-        // Find latest available slot before deadline
+        //latest available slot before deadline
         for (int t = job.deadline; t >= 1; t--) {
             if (!filled[t]) {
                 slots[t] = job.id;
